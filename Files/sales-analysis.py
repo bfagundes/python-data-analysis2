@@ -220,26 +220,22 @@ axs[0, 0].set_xlabel('Date')
 axs[0, 0].set_ylabel('Sales')
 
 # Weekly sales
-#weekly_sales = sales_data.groupby('Week')['Sales'].sum()
 axs[0, 1].plot(sales_by_week.index, sales_by_week.values)
 axs[0, 1].set_title('Weekly Sales')
 axs[0, 1].set_xlabel('Week')
 axs[0, 1].set_ylabel('Sales')
 
 # Monthly sales
-#monthly_sales = sales_data.groupby('Month')['Sales'].sum()
 axs[1, 0].plot(sales_by_month.index, sales_by_month.values)
 axs[1, 0].set_title('Monthly Sales')
 axs[1, 0].set_xlabel('Month')
 axs[1, 0].set_ylabel('Sales')
 
 # Quarterly sales
-#quarterly_sales = sales_data.groupby('Quarter')['Sales'].sum()
 axs[1, 1].plot(sales_by_quarter.index, sales_by_quarter.values)
 axs[1, 1].set_title('Quarterly Sales')
 axs[1, 1].set_xlabel('Quarter')
 axs[1, 1].set_ylabel('Sales')
 
-# Layout so plots do not overlap
 fig.tight_layout()
 plt.show()
