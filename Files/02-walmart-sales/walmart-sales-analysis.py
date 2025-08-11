@@ -6,7 +6,7 @@ import scipy.stats as stats
 import seaborn as snb
 
 # Loading the data
-sales_data = pd.read_csv('./Files/Walmart_Store_sales.csv')
+sales_data = pd.read_csv('./Files/02-walmart-sales/Walmart_Store_sales.csv')
 
 # Inspecting the data
 print(f"Sales Head:\n{sales_data.head()}")

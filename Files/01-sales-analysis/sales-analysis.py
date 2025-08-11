@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import seaborn
 
 # Loading the data
-sales_data = pd.read_csv('./Files/AusApparalSales4thQrt2020.csv')
+sales_data = pd.read_csv('./Files/01-sales-analysis/AusApparalSales4thQrt2020.csv')
 
 # Inspecting the data
 print(f"Sales Head:\n{sales_data.head()}")
