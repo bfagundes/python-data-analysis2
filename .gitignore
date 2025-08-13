@@ -177,4 +177,4 @@ outline.txt
 *.vscode
 
 # Project specific files
-Sales-Analysis.ipynb
+*.ipynb
