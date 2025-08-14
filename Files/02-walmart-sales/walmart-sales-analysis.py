@@ -347,14 +347,35 @@ y_pred_econ = model_econ.predict(X_test[['CPI', 'Unemployment', 'Fuel_Price']])
 r2_econ = r2_score(y_test, y_pred_econ)
 rmse_econ = mean_squared_error(y_test, y_pred_econ) ** 0.5
 
+# Model 4: CPI only
+model_day = LinearRegression().fit(X_train[['CPI']], y_train)
+y_pred_day = model_day.predict(X_test[['CPI']])
+r2_cpi = r2_score(y_test, y_pred_day)
+rmse_cpi = mean_squared_error(y_test, y_pred_day) ** 0.5
+
+# Model 5: Unemployment only
+model_day = LinearRegression().fit(X_train[['Unemployment']], y_train)
+y_pred_day = model_day.predict(X_test[['Unemployment']])
+r2_unem = r2_score(y_test, y_pred_day)
+rmse_unem = mean_squared_error(y_test, y_pred_day) ** 0.5
+
+# Model 6: Fuel Price only
+model_day = LinearRegression().fit(X_train[['Fuel_Price']], y_train)
+y_pred_day = model_day.predict(X_test[['Fuel_Price']])
+r2_fuel = r2_score(y_test, y_pred_day)
+rmsi_fuel = mean_squared_error(y_test, y_pred_day) ** 0.5
+
 # Print results
-print(f"Model with All Predictors: R² = {r2_all:.4f}, RMSE = {rmse_all:.2f}")
-print(f"Model with Day Only:       R² = {r2_day:.4f}, RMSE = {rmse_day:.2f}")
-print(f"Model with Econ Only:      R² = {r2_econ:.4f}, RMSE = {rmse_econ:.2f}")
+print(f"Model with All Predictors:    R² = {r2_all:.4f}, RMSE = {rmse_all:.2f}")
+print(f"Model with Day Only:          R² = {r2_day:.4f}, RMSE = {rmse_day:.2f}")
+print(f"Model with All Econ Indic:    R² = {r2_econ:.4f}, RMSE = {rmse_econ:.2f}")
+print(f"Model with CPI Only:          R² = {r2_cpi:.4f}, RMSE = {rmse_cpi:.2f}")
+print(f"Model with Unemployment Only: R² = {r2_unem:.4f}, RMSE = {rmse_unem:.2f}")
+print(f"Model with Fuel Price Only:   R² = {r2_fuel:.4f}, RMSE = {rmsi_fuel:.2f}")
 
 # Select best model
 best_model = max(
-    [('All', r2_all), ('Day', r2_day), ('Econ', r2_econ)],
+    [('All', r2_all), ('Day', r2_day), ('Econ', r2_econ), ('CPI', r2_cpi), ('Unem', r2_unem), ('Fuel', r2_fuel)],
     key=lambda x: x[1]
 )
 print(f"\nBest model: {best_model[0]} with R² = {best_model[1]:.4f}")
