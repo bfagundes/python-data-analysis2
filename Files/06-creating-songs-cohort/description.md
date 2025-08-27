@@ -29,14 +29,14 @@ The dataset comprises information from Spotify's API regarding all albums by the
 
 ## Steps to Perform:
 1. Initial data inspection and data cleaning:
-    1.1 Examine the data initially to identify duplicates, missing values, irrelevant entries, or outliers. Check for any instances of erroneous entries and rectify them as needed
+    1. Examine the data initially to identify duplicates, missing values, irrelevant entries, or outliers. Check for any instances of erroneous entries and rectify them as needed
 2. Refine the data for further processing based on your findings
 3. Perform exploratory data analysis and feature engineering
-    3.1. Utilize suitable visualizations to identify the two albums that should be recommended to anyone based on the number of popular songs in each album
-    3.2. Conduct exploratory data analysis to delve into various features of songs, aiming to identify patterns
-    3.3. Examine the relationship between a song's popularity and various factors, exploring how this correlation has evolved
-    3.4. Provide insights on the significance of dimensionality reduction techniques. Share your ideas and elucidate your observations
+    1. Utilize suitable visualizations to identify the two albums that should be recommended to anyone based on the number of popular songs in each album
+    2. Conduct exploratory data analysis to delve into various features of songs, aiming to identify patterns
+    3. Examine the relationship between a song's popularity and various factors, exploring how this correlation has evolved
+    4. Provide insights on the significance of dimensionality reduction techniques. Share your ideas and elucidate your observations
 4. Perform cluster analysis
-    4.1. Identify the right number of clusters
-    4.2. Use appropriate clustering algorithms
-    4.3. Define each cluster based on the features
+    1. Identify the right number of clusters
+    2. Use appropriate clustering algorithms
+    3. Define each cluster based on the features
